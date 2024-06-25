@@ -3,6 +3,9 @@ package main
 import (
 	"fmt"
 	"runtime"
+
+	ei "github.com/chava.gnolasco/godesde0/ejerinterfaces"
+	"github.com/chava.gnolasco/godesde0/models"
 )
 
 func main() {
@@ -53,4 +56,9 @@ func main() {
 		fmt.Println("User Slide: ", userSlide[0:])
 	*/
 
+	Pedro := new(models.Hombre)
+	Yesica := new(models.Mujer)
+
+	ei.HumanosRespirando(Pedro)
+	ei.HumanosRespirando(Yesica)
 }
