@@ -2,15 +2,15 @@ package ejercicios
 
 import "strconv"
 
-func ValidaNumero(cadena string) (int, string) {
+func ValidaNumero(cadena string) (bool, int, string) {
 
 	valorNumerico, errorConversion := strconv.Atoi(cadena)
 
 	if errorConversion != nil {
-		return 0, "El valor ingresado no es un número"
+		return false, 0, "El valor ingresado no es un número " + errorConversion.Error()
 	}
 
-	return valorNumerico, func() string {
+	return true, valorNumerico, func() string {
 		if valorNumerico > 100 {
 			return "Es mayor a 100"
 		}

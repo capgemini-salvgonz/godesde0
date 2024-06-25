@@ -3,21 +3,9 @@ package main
 import (
 	"fmt"
 	"runtime"
-
-	"github.com/chava.gnolasco/godesde0/ejercicios"
-	"github.com/chava.gnolasco/godesde0/variables"
 )
 
 func main() {
-	estado, nombre := variables.ConvertirATexto(64)
-	fmt.Println("Estado:", estado)
-	fmt.Println("Nombre:", nombre)
-
-	if os := runtime.GOOS; os == "Linux." {
-		fmt.Println("Linux")
-	} else {
-		fmt.Println("No es Linux, es", os)
-	}
 
 	switch os := runtime.GOOS; os {
 	case "Linux":
@@ -28,8 +16,41 @@ func main() {
 		fmt.Println("No es Linux ni Windows, es", os)
 	}
 
-	numero, mensaje := ejercicios.ValidaNumero("200")
-	fmt.Println("Número:", numero)
-	fmt.Println("Mensaje:", mensaje)
+	// files.WriteStringToFile(ejercicios.TablaDeMultiplicar(), "./files/txt/tabla.txt")
+	// files.AppendStringToFile(ejercicios.TablaDeMultiplicar(), "./files/txt/tabla.txt")
+	// files.AppendStringToFile(ejercicios.TablaDeMultiplicar(), "./files/txt/tabla.txt")
+	// files.ReadFile("./files/txt/tabla.txt")
+
+	// mac.GetRootBetween(0, 10, func(value float64) float64 { return math.Pow(value, 2) - 9 })
+
+	/*
+		funciones.Calculate()
+		if funciones.IntPredicate(func(numero int) bool { return numero >= 10 }, 8) {
+			fmt.Println("El numero evaluado es mayor o igual 10")
+		} else {
+			fmt.Println("El numero evaluado es menor a 10")
+		}
+
+		counter := funciones.CallsCounter()
+		fmt.Printf("Llamadas a la función: [%d]\n", counter())
+		fmt.Printf("Llamadas a la función: [%d]\n", counter())
+		fmt.Printf("Llamadas a la función: [%d]\n", counter())
+	*/
+
+	/*
+		user1 := repository.CreateUser(1, "Chava", "chava.gnolasco@gmail", true)
+		user2 := repository.CreateUser(2, "Salvador", "salvador.gnolasco@gmail", false)
+
+		userMap := make(map[string]models.User)
+
+		userMap["user1"] = user1
+		userMap["user2"] = user2
+
+		userSlide := make([]models.User, 0)
+		userSlide = append(userSlide, user1)
+
+		fmt.Println("Users: ", userMap)
+		fmt.Println("User Slide: ", userSlide[0:])
+	*/
 
 }
